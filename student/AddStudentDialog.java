@@ -24,13 +24,13 @@ import sun.text.resources.bg.JavaTimeSupplementary_bg;
 
 public class AddStudentDialog extends JDialog implements ActionListener{
 
-	JLabel jLabelNo = new JLabel("学号:");
+	JLabel jLabelCourse = new JLabel("课程号:");
 	JLabel jLabelName = new JLabel("姓名:");
 	JLabel jLabelSex = new JLabel("性别");
 	JLabel jLabelMajor = new JLabel("专业");
 	JRadioButton jRadioButton01 = new JRadioButton("男");
 	JRadioButton jRadioButton02 = new JRadioButton("女");
-	JTextField jtfNo = new JTextField(11);
+	JTextField jtfCourse = new JTextField(11);
 	JTextField jtfName = new JTextField(11); 
 	JTextField jtfMajor = new JTextField(11);  //这个表示学生的专业
 	JButton jbtSave = new JButton("保存");
@@ -48,8 +48,8 @@ public class AddStudentDialog extends JDialog implements ActionListener{
 
 		jPanel.add(jLabelName);
 		jPanel.add(jtfName);
-		jPanel.add(jLabelNo);
-		jPanel.add(jtfNo);
+		jPanel.add(jLabelCourse);
+		jPanel.add(jtfCourse);
 		jPanel.add(jLabelSex);
 		jPanel.add(jRadioButton01);
 		jPanel.add(jRadioButton02);
@@ -83,7 +83,7 @@ public class AddStudentDialog extends JDialog implements ActionListener{
 				jbtSave.setEnabled(false);
 				return ;
 			}
-			else if(jtfNo.getText().length()==0){
+			else if(jtfCourse.getText().length()==0){
 				JOptionPane.showMessageDialog(null,"你没有输入学号");
 				jbtSave.setEnabled(false);
 				return;
